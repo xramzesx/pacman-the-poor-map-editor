@@ -4,5 +4,7 @@ Map editor for my poor version of [Pacman](https://github.com/xramzesx/pacman-th
 To run this project, you need to host it (e.g. via VS Code Live Server plugin).
 You can find generator shortcuts list by pressing RBM or Esc key.
 MacOS, Linux and Windows keyboard schema compatible.
+## Live demo:
+[Try it yourself](https://xramzes.com/pacman-the-poor-map-editor/)
 ## Some things that I learned:
 - JavaScript Canvas service
