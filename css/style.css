@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Consolas', monospace;
+    color: white;
+    user-select: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #535353;
+}
+::-webkit-scrollbar {
+    width: 1em;
+    background-color: black;
+}
+::-webkit-scrollbar-track {
+    background: #181818;
+}
+body{
+    background-color: black;
+}
+header{
+    /* display: none; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    text-align: center;
+}
+header .options{
+    justify-self: end;
+}
+#content {
+    width: calc(100% - 4px);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: black;
+}
+canvas {
+    image-rendering: optimizeSpeed;            
+    image-rendering: -moz-crisp-edges;         
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;           
+    image-rendering: crisp-edges;              
+    background-color: #1b1b1b;
+    -ms-interpolation-mode: nearest-neighbor;  
+    box-sizing: content-box;
+}
+#canvasMenu {
+    /* background-color: black; */
+    z-index: 1;
+    /* display: none; */
+    /* box-shadow: blue; */
+    box-shadow: 10px 0px 50px -10px rgba(38,0,255,.5);
+    border: 1px solid blue;
+    /* border-right: 1px solid blue; */
+    image-rendering: pixelated;
+}
+#generator{
+    justify-self: end;
+    width: 1000px;
+    height: 1000px;
+    background-color: blanchedalmond;
+    position: relative;
+}
+#canvasGenerator{
+    justify-self: end ;
+    overflow: auto;
+    image-rendering: pixelated;
+    border: .5px solid orange;
+}
+#generator-area{
+    opacity: 0;
+    background-color: darkslateblue;
+    border: 2px solid slateblue;
+    border-radius: 5px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+}
+
+#FPS-counter{
+    color: yellowgreen;
+}
+
+#options {
+    background-color: #000A;
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 12;
+    
+    opacity: 0;
+
+    transition: opacity .1s ease;
+    pointer-events: none;
+    user-select: none;
+}
+#options-list {
+    margin: 0 auto;
+
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%) scaleY(0);
+
+    min-width: 15em; 
+    max-width: 19em;
+    width: 100%;
+
+    transition: transform .1s ease;
+}
+
+#options-list::after,
+#options-list::before{
+    text-align: center;
+    display: block;
+
+    min-width: 15em; 
+    max-width: 19em;
+    width: 100%;
+    opacity: .5;
+    padding: 10px;
+    transform: translateX(-10px);
+    margin: 0 auto;
+    box-sizing: content-box;
+    /* background-color: #181818; */
+    border: 1px solid #fff2;
+    color: aqua;
+    transition: border-color .1s ease, background-color .1s ease, color .1s ease, opacity .1s ease;
+}
+#options-list::before{
+    content: "Actions:";
+    border-bottom: none;
+}
+#options-list::after{
+    content: "Made by: Jakub Kędra 3ID 2K20 ©";
+    width: 100%;
+    border-top: none;
+    color: white;
+    opacity: .5;
+}
+
+#options-list:hover:before,
+#options-list:hover:after{
+    /* background-color: #181818aa; */
+    /* background-color: #101110aa; */
+    border-color: #fff6;
+    /* color: aqua; */
+    opacity: 1;
+}
+#options-list>*{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    cursor: pointer;
+}
+#options-list>*:hover{
+    background-color: #181818AA;
+}
+#options-list>*:hover:before{
+    content: ' ';
+    position: absolute;
+    width: .5em;
+    height: .5em;
+    left : -1em;
+    /* top : .5em; */
+    margin-top: .25em;
+    background-color: red;
+    border-radius: 10px;
+}
+.options-name{
+    text-align: left;
+}
+.options-shortcut{
+    text-align: right;
+    color: yellow;
+}

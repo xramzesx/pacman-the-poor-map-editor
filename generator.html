@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jakub Kędra 3ID">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Generajtor </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/gfx/ghost-favicon.ico"/>
+
+    <!-- scripts -->
+    <script src="js/FileSupport.js"></script>
+    <script src="js/CanvasField.js"></script>
+    <script src="js/Field.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- CSSes -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Generator mapki</h1>
+        <a class=export href="exported_canvas.html">Załaduj na jednym canvasie<br>ALE NAJPIERW ZAPISZ</a>
+        <div class="options">
+            <div id="FPS-counter">0 fps</div>
+            <input type="checkbox" name="map" id="map"> -automat        
+        </div>
+    </header>
+    <div id="content">
+        <canvas id=canvasMenu height="1000" width="400"></canvas>
+        <div id=generator>
+            <canvas id=canvasGenerator height="1000" width="1000">
+                <!-- <div style="z-index: 100; color: white">pozdro</div> -->
+            </canvas>
+            <div id="generator-area"></div>
+        </div>
+    </div>
+    <div id="options">
+        <div id="options-list">
+            <div id="options-undo">
+                <div class="options-name">Undo</div>
+                <div class="options-shortcut">Ctrl + Z</div>
+            </div>
+            <div id="options-redo">
+                <div class="options-name">Redo</div>
+                <div class="options-shortcut">Ctrl + Y</div>
+            </div>
+            <div id="options-cut">
+                <div class="options-name">Cut</div>
+                <div class="options-shortcut">Ctrl + X</div>
+            </div>
+            <div id="options-copy">
+                <div class="options-name">Copy</div>
+                <div class="options-shortcut">Ctrl + C</div>
+            </div>
+            <div id="options-paste">
+                <div class="options-name">Paste</div>
+                <div class="options-shortcut">Ctrl + V</div>
+            </div>
+            <div id="options-delete">
+                <div class="options-name">Delete</div>
+                <div class="options-shortcut">Del</div>
+            </div>
+            <div id="options-save">
+                <div class="options-name">Save to file</div>
+                <div class="options-shortcut">Ctrl + S</div>
+            </div>
+            <div id="options-load">
+                <div class="options-name">Load data from file</div>
+                <div class="options-shortcut">Ctrl + L</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
